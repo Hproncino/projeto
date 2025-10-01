@@ -1,20 +1,19 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
 
-df = pd.read_csv("pizzas.csv")
-
-modelo = LinearRegression()
-x= df[['diametro']]
-y = df[['preco']]
-
-modelo.fit(x,y)
-
-st.title("Previsão de preço de pizzas")
+st.title("Predição de Vendas com Regressão Linear")
 st.divider()
 
-diametro = st.number_input("informe o tamanho do diametro: ", )
+uploaded_file = st.file_uploader("Escolha um arquivo CSV", type="csv")
 
-if diametro:
-    preco_previsto = modelo.predict([[diametro]])[0][0]
-    st.write(f"o valor previsto para uma pizza de {diametro:.2f}cm é de R${preco_previsto:.2f}.")
+if uploaded_file is not None:
+    df = pd.read.csv(uploaded_file)
+
+    st.subheader("Visualização dos Dados")
+    st.dataframe(df.head())
