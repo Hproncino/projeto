@@ -13,7 +13,11 @@ st.divider()
 uploaded_file = st.file_uploader("Escolha um arquivo CSV", type="csv")
 
 if uploaded_file is not None:
-    df = pd.read.csv(uploaded_file)
+    df = pd.read_csv(uploaded_file)
 
     st.subheader("Visualização dos Dados")
     st.dataframe(df.head())
+
+    st.subheader("Análise Exploratória de Dados (EDA)")
+    st.write("Estatísticas Descritivas:")
+    st.write(df.describe())
