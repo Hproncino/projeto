@@ -1,1 +1,4 @@
 csv/Ecommerce_Sales_Prediction_Dataset.csv
+app.py
+csv/predict_df.csv
+.gitignore
