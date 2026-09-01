@@ -61,17 +61,4 @@ No notebook são calculadas:
 - RMSE (raiz do erro quadrático médio)
 - MAE (erro absoluto médio)
 - R² (coeficiente de determinação)
-
-## Observações
-
-- O núcleo do projeto está no notebook, com foco acadêmico e exploratório.
-- A pasta `src/` ainda está preparada para futura modularização do pipeline em scripts reutilizáveis.
-- O diretório `tests/` está criado como base para evolução de testes automatizados.
-
-## Próximos Passos (Sugestões)
-
-- separar o pipeline em módulos Python dentro de `src/projeto/`
-- criar script de treino e script de inferência
-- adicionar testes unitários para transformação de dados e métricas
-- incluir baseline comparativa com outros modelos (ex.: XGBoost, LSTM)
-- versionar artefatos de modelo e resultados
+  
